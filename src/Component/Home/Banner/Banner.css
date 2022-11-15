@@ -7,7 +7,7 @@
     position: relative;
     max-width: 1280px;
     min-height: 711px;
-    background-color: rgba(45, 156, 69, 0.521);
+    background:linear-gradient(45deg, rgba(48, 188, 76, 0.785),skyblue);
 }
 
 .main-banner .content{
@@ -34,7 +34,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(54, 162, 75, 0.164);
+    background-color: rgba(29, 116, 41, 0.358);
     mix-blend-mode: overlay;
 }
 .main-banner .bg-video{
@@ -45,4 +45,7 @@
 .main-banner .bg-video.active{
     clip-path: circle(150% at 0% 50%);
     transition: clip-path 2s ease;
+}
+.title::before{
+    /* content:'""'; */
 }
