@@ -7,15 +7,42 @@
     position: relative;
     max-width: 1280px;
     min-height: 711px;
-    background-color: black;
-    mix-blend-mode: overlay;
+    background-color: rgba(45, 156, 69, 0.521);
 }
-.bg-video{
+
+.main-banner .content{
+    width: 50%;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    z-index: 999;
+}
+.main-banner video{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     min-height: 711px;
-    object-fit: fill;
+    object-fit: cover;
     z-index: 0;
 } 
+.main-banner::before{
+    z-index: 777;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(54, 162, 75, 0.164);
+    mix-blend-mode: overlay;
+}
+.main-banner .bg-video{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0% 50%);
+}
+.main-banner .bg-video.active{
+    clip-path: circle(150% at 0% 50%);
+    transition: clip-path 2s ease;
+}
