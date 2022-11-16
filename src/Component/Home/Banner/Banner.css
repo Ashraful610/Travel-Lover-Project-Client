@@ -9,14 +9,6 @@
     min-height: 711px;
     background:linear-gradient(45deg, rgba(48, 188, 76, 0.785),skyblue);
 }
-
-.main-banner .content{
-    width: 50%;
-    position: absolute;
-    left: 100px;
-    top: 200px;
-    z-index: 999;
-}
 .main-banner video{
     position: absolute;
     top: 0;
@@ -45,7 +37,4 @@
 .main-banner .bg-video.active{
     clip-path: circle(150% at 0% 50%);
     transition: clip-path 2s ease;
-}
-.title::before{
-    /* content:'""'; */
 }
