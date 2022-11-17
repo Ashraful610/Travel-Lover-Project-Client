@@ -6,7 +6,7 @@
 .main-banner{
     position: relative;
     max-width: 1280px;
-    min-height: 711px;
+    min-height: 750px;
     background:linear-gradient(45deg, rgba(48, 188, 76, 0.785),skyblue);
 }
 .main-banner video{
@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 711px;
+    min-height: 750px;
     object-fit: cover;
     z-index: 0;
 } 
@@ -37,4 +37,57 @@
 .main-banner .bg-video.active{
     clip-path: circle(150% at 0% 50%);
     transition: clip-path 2s ease;
+}
+.wave-animation{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: url('https://i.ibb.co/1Q2K0z3/wave.png');
+    background-size: 1000px 100px;
+}
+.wave-animation.wave-1{
+    animation: animate 8s linear infinite;
+    z-index: 999;
+    opacity: .7;
+    animation-delay: 0s;
+    bottom: 0;
+}
+.wave-animation.wave-2{
+    animation: animate2 12s linear infinite;
+    z-index: 998;
+    opacity: .6;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+.wave-animation.wave-3{
+    animation: animate 10s linear infinite;
+    z-index: 997;
+    opacity: .4;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+.wave-animation.wave-4{
+    animation: animate2 5s linear infinite;
+    z-index: 995;
+    opacity: .2;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+@keyframes animate{
+    0%{
+        background-position-x:0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate2{
+    0%{
+        background-position-x:0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
 }
