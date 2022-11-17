@@ -5,7 +5,7 @@ import GoTo from './GoTo/GoTo';
 const Home = () => {
     return (
         <div>
-            <Banner/>
+            {/* <Banner/> */}
             {/* <GoTo/> */}
         </div>
     );
