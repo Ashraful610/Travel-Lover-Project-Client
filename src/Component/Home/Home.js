@@ -1,12 +1,12 @@
 import React from 'react';
 import Banner from './Banner/Banner';
-import GoTo from './GoTo/GoTo';
+import GoToSection from './GoToSection/GoToSection';
 
 const Home = () => {
     return (
-        <div>
+        <div className='px-5 pt-1'>
             {/* <Banner/> */}
-            {/* <GoTo/> */}
+            <GoToSection/>
         </div>
     );
 };

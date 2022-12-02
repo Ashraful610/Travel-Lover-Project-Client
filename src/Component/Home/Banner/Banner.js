@@ -21,29 +21,29 @@ const Banner = () => {
     }
 
     return (
-        <div className='main-banner mx-auto overflow-hidden'>
+        <div className='main-banner mx-auto overflow-hidden rounded-xl'>
             {/* ---------------- all video ------------------ */}
             <video src={video1} className={(videos.indexOf(video1)=== index) ? 'bg-video active': 'bg-video'} autoPlay loop muted type='video/mp4' />
             <video src={video2} className={(videos.indexOf(video2)=== index) ? 'bg-video active': 'bg-video'} autoPlay loop muted type='video/mp4' />
             <video src={video3} className={(videos.indexOf(video3)=== index) ? 'bg-video active': 'bg-video'} autoPlay loop muted type='video/mp4' />
             <video src={video4} className={(videos.indexOf(video4)=== index) ? 'bg-video active': 'bg-video'} autoPlay loop muted type='video/mp4' />
             {/* -------------- content ----------------- */}
-            <div className=" lg:w-[55%] sm:w-[60%] w-[65%]  absolute xl:left-[100px] lg:left-[80px] sm:left-[50px] left-[20px] top-[250px] z-[888] space-y-5">
+            <div className=" lg:w-[55%] sm:w-[60%] w-[65%]  absolute xl:left-[100px] lg:left-[80px] sm:left-[50px] left-[20px] top-[150px] z-[888] space-y-5">
                 {/* ----------------- banner title ------------------ */}
                 <h1 className='lg:text-4xl sm:text-3xl text-xl text-white font-semibold uppercase title'>
                     {/* --------------- react icons qoute left ---------- */}
-                 <FaQuoteLeft className='inline-block  text-green-700 mx-2'/>   
+                 <FaQuoteLeft className='inline-block  text-green-600 mx-2'/>   
                  The world is a book and those who do not travel read only one page
                  {/* --------------- react icons qoute right ---------- */}
-                  <FaQuoteRight className='inline-block text-green-700 mx-2'/>
+                  <FaQuoteRight className='inline-block text-green-600 mx-2'/>
                 </h1>
                 {/* --------------- button  ------------------- */}
-                <button className='btn bg-green-700 hover:bg-transparent hover:border-2 border-green-800 hover:border-green-800  font-bold' onClick={()=> console.log('hello')}>
+                <button className='btn bg-green-700 hover:bg-transparent hover:border-2 border-green-800 hover:border-green-600  font-bold' onClick={()=> console.log('hello')}>
                    Travel Now
                 </button>
             </div>
             {/* ------------- change background video button div -------------  */}
-            <div className='space-y-5 absolute z-[800] md:right-12 right-5 top-[260px]'>
+            <div className='space-y-5 absolute z-[800] md:right-12 right-5 top-[160px]'>
                 {
                     videos.map((video, index) =>
                      <div key={index} className='w-[10px] h-[10px] hover:scale-150 duration-200 rounded-full  bg-green-600 cursor-pointer' onClick={()=>setIndex( index)}></div> ) 
@@ -76,6 +76,7 @@ const Banner = () => {
             <div className="wave-animation wave-3"></div>
             <div className="wave-animation wave-4"></div> */}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className='absolute left-0 bottom-0'><path fill="#ffffff" fill-opacity="1" d="M0,192L40,197.3C80,203,160,213,240,202.7C320,192,400,160,480,176C560,192,640,256,720,277.3C800,299,880,277,960,245.3C1040,213,1120,171,1200,176C1280,181,1360,235,1400,261.3L1440,288L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+
         </div>
     );
 };
